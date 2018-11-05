@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-enum Category{
-  Audio = "Audio",
-  Video = "Video",
-  TV = "TV"
-};
+enum Category {
+  Audio = 'Audio',
+  Video = 'Video',
+  TV = 'TV'
+}
 
 @Component({
   selector: 'app-product',
@@ -19,14 +19,18 @@ export class ProductComponent implements OnInit {
   category: Category;
   isAvailable: boolean;
 
-  constructor() { 
-    this.name = "TV";
-    this.description = "Smart TV 32\""
+  constructor() {
+    this.name = 'TV';
+    this.description = 'Smart TV 32\"';
     this.price = 150;
     this.category = Category.TV;
     this.isAvailable = true;
   }
 
   ngOnInit() {
+  }
+
+  onClickBuy() {
+    console.log('Buy was clicked');
   }
 }
